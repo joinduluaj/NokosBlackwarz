@@ -1,0 +1,188 @@
+<html lang="id">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Black Warz - Toko nokos murah
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&amp;family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: 'Roboto', sans-serif;
+      background: #0f172a;
+      color: #cbd5e1;
+    }
+    h1, h2, h3 {
+      font-family: 'Orbitron', sans-serif;
+    }
+    /* Animasi tombol beli */
+    .btn-buy {
+      transition: all 0.3s ease;
+    }
+    .btn-buy:hover {
+      background-color: #2563eb;
+      box-shadow: 0 0 15px #3b82f6;
+      transform: scale(1.05);
+    }
+    /* Animasi kartu produk */
+    .card-product {
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      will-change: transform;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.8s forwards;
+    }
+    .card-product:nth-child(1) {
+      animation-delay: 0.2s;
+    }
+    .card-product:nth-child(2) {
+      animation-delay: 0.4s;
+    }
+    .card-product:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 10px 25px rgba(59, 130, 246, 0.6);
+      z-index: 10;
+    }
+    /* Animasi gambar profil */
+    .profile-pic {
+      transition: transform 0.5s ease;
+      will-change: transform;
+    }
+    .profile-pic:hover {
+      transform: rotate(10deg) scale(1.1);
+      box-shadow: 0 0 20px #3b82f6;
+    }
+    /* Animasi link negara */
+    .country-link {
+      transition: color 0.3s ease;
+    }
+    .country-link:hover {
+      color: #3b82f6;
+      text-decoration: underline;
+    }
+    /* Animasi teks */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .title-text {
+      font-size: 2.5rem;
+      background: linear-gradient(90deg, #3b82f6, #93c5fd);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-shadow: 0 0 8px rgba(59, 130, 246, 0.5);
+      letter-spacing: 2px;
+      position: relative;
+      display: inline-block;
+    }
+    .title-text::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, #3b82f6, transparent);
+      animation: underline 2s infinite;
+    }
+    @keyframes underline {
+      0% { width: 0; left: 0; }
+      50% { width: 100%; left: 0; }
+      100% { width: 0; left: 100%; }
+    }
+  </style>
+ </head>
+ <body class="min-h-screen flex flex-col items-center px-4 py-8">
+  <!-- Header -->
+  <header class="w-full max-w-5xl flex flex-col items-center mb-12">
+   <div class="relative w-32 h-32 rounded-full overflow-hidden border-4 border-blue-600 profile-pic cursor-pointer">
+    <img alt="Foto profil robot futuristik berwarna biru dengan latar belakang gelap dan efek neon" class="w-full h-full object-cover" height="256" src="https://iili.io/FkkwOkx.md.jpg" width="256"/>
+   </div>
+   <h1 class="mt-6 title-text">
+    BLACK WARZ
+   </h1>
+   <p class="mt-2 text-blue-300 font-semibold tracking-wide uppercase text-sm">
+    Toko nomor kosong fresh Murah
+   </p>
+  </header>
+  <!-- Price List -->
+  <section class="w-full max-w-5xl">
+   <h2 class="text-3xl text-blue-400 font-bold mb-8 border-b-2 border-blue-600 pb-2 tracking-wide">
+    Daftar Harga Nokos
+   </h2>
+   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    <!-- Produk 1 -->
+    <article class="card-product bg-gradient-to-br from-blue-900 to-blue-800 rounded-xl p-6 shadow-lg flex flex-col">
+     <img alt="Robot tempur Mark I berwarna biru metalik dengan desain 2D bergaya pixel art, latar belakang gelap" class="rounded-lg mb-4 object-cover w-full h-48" height="250" src="https://iili.io/Fkk1SLJ.md.webp" width="400"/>
+     <h3 class="text-xl font-semibold text-blue-200 mb-2">
+      Nokos Bangladesh Fresh
+     </h3>
+     <p class="text-blue-300 flex-grow mb-4">
+      Nokos Bangladesh fresh harga murah terjangkau enak buat di jual kembali.
+     </p>
+     <div class="flex justify-between items-center mb-4">
+      <span class="text-blue-400 font-bold text-lg">
+       Rp 3.000k
+      </span>
+      <a class="country-link text-blue-300 hover:text-blue-500 flex items-center space-x-1" href="https://id.wikipedia.org/wiki/Indonesia" rel="noopener noreferrer" target="_blank">
+       <i class="fas fa-globe">
+       </i>
+       <span>
+        Bangladesh
+       </span>
+      </a>
+     </div>
+     <a href="https://wa.me/6282260197600" target="_blank" class="btn-buy bg-blue-600 text-white font-semibold py-2 rounded-lg shadow-md hover:bg-blue-700 flex items-center justify-center space-x-2">
+      <i class="fas fa-shopping-cart">
+      </i>
+      <span>
+       Beli
+      </span>
+     </a>
+    </article>
+    <!-- Produk 2 -->
+    <article class="card-product bg-gradient-to-br from-blue-900 to-blue-800 rounded-xl p-6 shadow-lg flex flex-col">
+     <img alt="Robot pengintai SkyEye berwarna biru cerah dengan kamera besar di kepala, desain 2D pixel art" class="rounded-lg mb-4 object-cover w-full h-48" height="250" src="https://iili.io/FkkW7AN.md.jpg" width="400"/>
+     <h3 class="text-xl font-semibold text-blue-200 mb-2">
+      Murid Garap nokos anti web nokos free
+     </h3>
+     <p class="text-blue-300 flex-grow mb-4">
+      Murid creat nokos anti berbayar anti dari web enak buat kan jualan auto balmod kalo ada usaha.
+     </p>
+     <div class="flex justify-between items-center mb-4">
+      <span class="text-blue-400 font-bold text-lg">
+       Rp 10.000k
+      </span>
+      <a class="country-link text-blue-300 hover:text-blue-500 flex items-center space-x-1" href="https://en.wikipedia.org/wiki/United_States" rel="noopener noreferrer" target="_blank">
+       <i class="fas fa-globe">
+       </i>
+       <span>
+        All negara
+       </span>
+      </a>
+     </div>
+     <a href="https://wa.me/6282260197600" target="_blank" class="btn-buy bg-blue-600 text-white font-semibold py-2 rounded-lg shadow-md hover:bg-blue-700 flex items-center justify-center space-x-2">
+      <i class="fas fa-shopping-cart">
+      </i>
+      <span>
+       Beli
+      </span>
+     </a>
+    </article>
+   </div>
+  </section>
+  <footer class="mt-16 mb-8 text-center text-blue-400 text-sm select-none">
+   © 2024 Black Warz. Semua hak cipta dilindungi.
+  </footer>
+ </body>
+</html>
